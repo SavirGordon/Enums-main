@@ -1,4 +1,3 @@
-//: [Previous](@previous)
 /*: ## Using Enumerations in a Switch Control Flow
  A switch statement is a common place you might want to use an enum. Switch statements must be exhaustive. This means that each possible case must be addressed explicitly by the control flow. Using an enum type in the switch statement can prevent us from accidentally forgetting to address a case.
 
@@ -54,7 +53,7 @@ enum Vehicle {
 
 // 1: Add instance of Vehicle here
 
- 
+var myRide = Vehicle.truck
 
 
 /*: 2. Create a switch statement that uses the myRide variable as the expression and has three cases in the switch statement:
@@ -66,7 +65,14 @@ enum Vehicle {
 
 // 2: Add switch statement here
 
-
+switch myRide{
+case .airplane:
+    print("Let's fly to Peru")
+case .boat:
+    print("Let's sail to Hawaii")
+case .truck:
+    print("Let's drive to the store")
+}
 
 
 

@@ -40,17 +40,18 @@
 
 // 1: Make Vehicle conform to CaseIterable
 
-enum Vehicle {
+enum Vehicle: CaseIterable {
     case truck
     case boat
     case airplane
 }
 
 
-
 /*:
  2. Create a for loop that prints all of the cases of the Vehicle enum. */
 
 // 2: Create for loop here
-
+for vehicle in Vehicle.allCases {
+    print(vehicle)
+}
 //: [Next](@next)

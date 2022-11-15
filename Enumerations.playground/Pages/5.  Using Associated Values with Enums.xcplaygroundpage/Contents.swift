@@ -43,21 +43,27 @@ switch tonightsSpecial {
  1.Add an associated Bool value called isFourWheelDrive to the truck case in Vehicle.
  */
 enum Vehicle {
-    case truck // 1: Add associated value here
+    case truck(isFourWheelDrive: Bool)// 1: Add associated value here
     case boat
     case airplane
 }
-let myRide = Vehicle.truck // 2: Set associated value here
+let myRide = Vehicle.truck(isFourWheelDrive: true) // 2: Set associated value here
 /*:
  2.Set isFourWheelDrive to true in the declaration of myRide.
  */
-
+//done
 /*:
  3.Extract isFourWheelDrive as a constant in the truck case within the switch statement.
 
 */
 switch myRide{
-    case .truck: // 3: Extract value here
+    case let .truck(isFourWheelDrive):
+    if isFourWheelDrive{
+        print("Let's go to the mountains")
+    }
+    else{
+        print("Let's go to the store")
+    }
     // 4: Add logic here
         print("Let's go to the store.")
     case .boat:
